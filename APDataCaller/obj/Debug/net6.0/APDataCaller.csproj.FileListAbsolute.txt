@@ -27,3 +27,4 @@ C:\Users\aespinosa.DOMAIN01\source\repos\APDataCaller\APDataCaller\obj\Debug\net
 C:\Users\aespinosa.DOMAIN01\source\repos\APDataCaller\APDataCaller\obj\Debug\net6.0\ref\APDataCaller.dll
 C:\Users\aespinosa.DOMAIN01\source\repos\APDataCaller\APDataCaller\bin\Debug\net6.0\APDateRetriever.dll
 C:\Users\aespinosa.DOMAIN01\source\repos\APDataCaller\APDataCaller\bin\Debug\net6.0\APDateRetriever.pdb
+C:\Users\aespinosa.DOMAIN01\source\repos\APDataCaller\APDataCaller\bin\Debug\net6.0\Newtonsoft.Json.dll
