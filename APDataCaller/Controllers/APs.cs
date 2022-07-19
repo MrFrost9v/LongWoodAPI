@@ -10,6 +10,7 @@ namespace APDataCaller.Controllers
     {
         AccessPointGetResponce Responce = GetAccessPointResponce().Result;
         [HttpGet(Name ="Aps")]
+
         public AccessPointGetResponce Get()
         {
             return Responce;
