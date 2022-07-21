@@ -1,23 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using static APDateRetriever.Table;
 using APDateRetriever;
-
+using Newtonsoft.Json;
+using Microsoft.AspNetCore.Cors;
+using System.Text.Json;
 
 namespace APDataCaller.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-
     public class Percentages : Controller
     {
        [HttpGet(Name = ("Percentages"))]
-       public IEnumerable<PercetageData> Get()
+       public PercetageDataList Get()
         {
-            List<PercetageData> data = new List<PercetageData>{GetConservatory(), GetGardens(), GetGiftShop()};
+            PercetageDataList data = new(GetConservatory(), GetGardens(), GetGiftShop());
             return data;
         }
 
        [HttpGet("Conservatory")]
+       [Produces("application/json")]
         public PercetageData GetConservatory() 
         { 
             PercetageData Data = PercetageDataMaker("Conservatory");
@@ -27,13 +29,15 @@ namespace APDataCaller.Controllers
         [HttpGet("Gardens")]
         public PercetageData GetGardens()
         {
-            return PercetageDataMaker("Entry Into Gardens");
+            PercetageData Data =  PercetageDataMaker("Entry Into Gardens");
+            return Data;
         }
 
         [HttpGet("GiftShop")]
         public PercetageData GetGiftShop()
         {
-            return PercetageDataMaker("Gift Shop space");
+            PercetageData Data = PercetageDataMaker("Gift Shop space");
+            return Data;
         }
 
     }
